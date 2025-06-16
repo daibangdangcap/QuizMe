@@ -1,0 +1,64 @@
+<ng-container>
+  <ng-template #SignInformation>
+    <div class="container background-text">
+      <h1>Welcome to QuizMe 🎉</h1>
+    </div>
+    <div class=" center-page">
+      <div class="button-row">
+        <arrow-button-left
+          *ngIf="orderStep !== steps[0]"
+          (previousStep) = "handleData($event)"
+          [data]="player"
+          [currentField]="currentField">
+        </arrow-button-left>
+        <arrow-button-right
+          [hidden]="orderStep === steps[steps.length-1]"
+          (nextStep) = "handleData($event)"
+          [data]="player"
+          [currentField]="currentField">
+        </arrow-button-right>
+      </div>
+      <!-- Quan trọng: đặt đúng thuộc tính @slideAnimation -->
+      <div> <!--[@slideAnimation]="animationDirection" đoạn này animation -->
+        <ng-container [ngSwitch]="orderStep">
+          <div *ngSwitchCase="1">
+            <custom-input
+              [value]="player.name"
+              (changeEvent)="changeValue($event)">
+            </custom-input>
+          </div>
+          <div *ngSwitchCase="2">
+            <image-input
+              [value]="player.image"
+              (changeEvent)="changeValue($event)">
+            </image-input>
+          </div>
+          <div *ngSwitchCase="3">
+            <div class="ready-wrapper">
+              <div class="ready-content background-text">
+                <p>Bạn đã sẵn sàng chưa, {{player.name}}?</p>
+              </div>
+              <br />
+              <image-input
+                [value]="player.image"
+                (changeEvent)="changeValue($event)"
+                [finalStep]="true">
+              </image-input>
+              <div class="ready-content background-text" style="margin-top: 2vh;">
+                <p>{{room.playerNumber}} người chơi đã sẵn sàng!</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="SignInformation"></ng-container>
+</ng-container>
+
+<ng-template #Play>
+  
+</ng-template>
+
+

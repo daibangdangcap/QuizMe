@@ -1,0 +1,45 @@
+/* app.component.css */
+.image-upload-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-upload-box i {
+  font-size: 24px;
+  color: #555;
+}
+
+.image-upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-upload-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-upload-box img {
+  width: 200px; /* chỉnh tùy ý */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.image-checkbox {
+  position: absolute;
+  bottom: -15px;  /* cho nó nằm lấn xuống dưới 1 chút */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}

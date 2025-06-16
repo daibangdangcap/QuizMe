@@ -1,0 +1,15 @@
+<div class="image-upload-container">
+  <div class="image-upload-box"
+    [ngStyle]="{ 'pointer-events': finalStep ? 'none' : 'auto' }"
+    (click)="!finalStep && fileInput.click()">
+    <ng-container *ngIf="previewUrl; else cameraIcon">
+      <img [src]="previewUrl" alt="Uploaded" />
+    </ng-container>
+    <ng-template #cameraIcon>
+      <i class="fa fa-camera"></i>
+    </ng-template>
+    <input type="file" hidden #fileInput (change)="onFileSelected($event)" accept="image/*" />
+  </div>
+
+  <custom-checkbox class="image-checkbox" *ngIf="finalStep" (checkboxToggled)="onCheckboxToggled($event)"></custom-checkbox>
+</div>
