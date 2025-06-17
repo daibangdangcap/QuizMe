@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'custom-input',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css'
 })

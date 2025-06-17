@@ -1,0 +1,29 @@
+/* answer-button.component.css */
+.answer-btn {
+  width: 30%;
+  padding: 16px;
+  margin: 8px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.answer-btn:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.answer-btn.selected {
+  background-color: #3399ff; /* blue when selected */
+}
+
+.answer-btn.correct {
+  background-color: #28a745; /* green */
+}
+
+.answer-btn.wrong {
+  background-color: #dc3545; /* red */
+}

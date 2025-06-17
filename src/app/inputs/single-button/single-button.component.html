@@ -1,0 +1,16 @@
+<!-- answer-button.component.html -->
+<div *ngFor="let option of options">
+  <button
+    class="answer-btn"
+    [ngClass]="{
+      'selected': option.isSelected,
+      'correct': option.isCorrect,
+      'wrong': option.isSelected && !option.isCorrect
+    }"
+    [ngStyle]="{
+      'background-color': option.isSelected ? '#4287f5' : option.color
+    }"
+    (click)="selectAnswer(option)">
+    {{option.letter}}. {{ option.label }}
+  </button>
+</div>

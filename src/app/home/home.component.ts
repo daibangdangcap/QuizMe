@@ -15,12 +15,14 @@ import { CustomCheckboxComponent } from "../inputs/custom-checkbox/custom-checkb
 import { Room } from '../../models/room.model';
 import { Subscription } from 'rxjs';
 import { WebsocketService } from '../services/websocket.service';
+import { SingleButtonComponent } from "../inputs/single-button/single-button.component";
+import { QuestionComponent } from "../components/question/question.component";
 
 
 @Component({
   standalone: true,
   selector: 'app-home-component',
-  imports: [ArrowButtonRightComponent, InputComponent, ImageInputComponent, ArrowButtonLeftComponent, NgSwitch, NgSwitchCase, CommonModule, CustomCheckboxComponent],
+  imports: [ArrowButtonRightComponent, InputComponent, ImageInputComponent, ArrowButtonLeftComponent, NgSwitch, NgSwitchCase, CommonModule, QuestionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
@@ -51,6 +53,10 @@ export class HomeComponent {
 
   ngOnInit(){
 
+  }
+
+  ngOnChanges(){
+    
   }
   handleData(event: string) {
     const currentIndex = this.steps.indexOf(this.orderStep);
