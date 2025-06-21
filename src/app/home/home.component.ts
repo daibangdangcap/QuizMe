@@ -1,3 +1,4 @@
+import { BASEURL } from '../environment';
 import { Component } from '@angular/core';
 import { ArrowButtonRightComponent } from "../inputs/arrow-button-right/arrow-button-right.component";
 import { InputComponent } from "../inputs/input/input.component";
@@ -17,6 +18,7 @@ import { Subscription } from 'rxjs';
 import { WebsocketService } from '../services/websocket.service';
 import { SingleButtonComponent } from "../inputs/single-button/single-button.component";
 import { QuestionComponent } from "../components/question/question.component";
+import { ProductService } from '../services/product-service/product.service';
 
 
 @Component({
@@ -47,16 +49,18 @@ export class HomeComponent {
   animationDirection: 'left' | 'right' | null = null;
   currentField: string='name';
   private subscriptions!: Subscription;
-  constructor(private wbService: WebsocketService){
+  constructor(private wbService: WebsocketService, private productService: ProductService){
 
   }
 
   ngOnInit(){
-
+    this.productService.getProducts().subscribe((rs:any) =>{
+      console.log(rs)
+    })
   }
 
   ngOnChanges(){
-    
+
   }
   handleData(event: string) {
     const currentIndex = this.steps.indexOf(this.orderStep);
