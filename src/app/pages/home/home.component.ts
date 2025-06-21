@@ -1,24 +1,24 @@
-import { BASEURL } from '../environment';
+import { BASEURL } from '../../environment';
 import { Component } from '@angular/core';
-import { ArrowButtonRightComponent } from "../inputs/arrow-button-right/arrow-button-right.component";
-import { InputComponent } from "../inputs/input/input.component";
-import { ImageInputComponent } from "../inputs/image-input/image-input.component";
-import { ArrowButtonLeftComponent } from "../inputs/arrow-button-left/arrow-button-left.component";
+import { ArrowButtonRightComponent } from "../../inputs/arrow-button-right/arrow-button-right.component";
+import { InputComponent } from "../../inputs/input/input.component";
+import { ImageInputComponent } from "../../inputs/image-input/image-input.component";
+import { ArrowButtonLeftComponent } from "../../inputs/arrow-button-left/arrow-button-left.component";
 import { CommonModule, NgSwitch, NgSwitchCase } from '@angular/common';
-import { Player } from '../../models/player.model';
+import { Player } from '../../../models/player.model';
 import {
   trigger,
   style,
   animate,
   transition
 } from '@angular/animations';
-import { CustomCheckboxComponent } from "../inputs/custom-checkbox/custom-checkbox.component";
-import { Room } from '../../models/room.model';
+import { CustomCheckboxComponent } from "../../inputs/custom-checkbox/custom-checkbox.component";
+import { Room } from '../../../models/room.model';
 import { Subscription } from 'rxjs';
-import { WebsocketService } from '../services/websocket.service';
-import { SingleButtonComponent } from "../inputs/single-button/single-button.component";
-import { QuestionComponent } from "../components/question/question.component";
-import { ProductService } from '../services/product-service/product.service';
+import { WebsocketService } from '../../services/websocket.service';
+import { SingleButtonComponent } from "../../inputs/single-button/single-button.component";
+import { QuestionComponent } from "../../components/question/question.component";
+import { ProductService } from '../../services/product-service/product.service';
 
 
 @Component({
@@ -54,9 +54,9 @@ export class HomeComponent {
   }
 
   ngOnInit(){
-    this.productService.getProducts().subscribe((rs:any) =>{
-      console.log(rs)
-    })
+    // this.productService.getProducts().subscribe((rs:any) =>{
+    //   console.log(rs)
+    // })
   }
 
   ngOnChanges(){

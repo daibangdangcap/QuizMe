@@ -3,7 +3,7 @@
     <div class="container background-text">
       <h1>Welcome to QuizMe 🎉</h1>
     </div>
-    <div class=" center-page">
+    <div class="center-page">
       <div class="button-row">
         <arrow-button-left
           *ngIf="orderStep !== steps[0]"
@@ -24,7 +24,9 @@
           <div *ngSwitchCase="1">
             <custom-input
               [value]="player.name"
-              (changeEvent)="changeValue($event)">
+              (changeEvent)="changeValue($event)"
+              [placeholder]="'Nhập bí danh của bạn'"
+              [textAlign]="'center'">
             </custom-input>
           </div>
           <div *ngSwitchCase="2">
@@ -54,7 +56,7 @@
 
     </div>
   </ng-template>
-  <ng-container *ngTemplateOutlet="Play"></ng-container>
+  <ng-container *ngTemplateOutlet="SignInformation"></ng-container>
 </ng-container>
 
 <ng-template #Play>

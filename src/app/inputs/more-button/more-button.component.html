@@ -1,0 +1,10 @@
+<div class="menu-wrapper">
+  <button class="circle-btn" (click)="toggleMenu()">
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </button>
+
+  <div class="menu-dropdown" *ngIf="isMenuOpen">
+    <div class="menu-item" (click)="selectType()">Tuỳ chọn 1</div>
+    <div class="menu-item" (click)="selectType()">Tuỳ chọn 2</div>
+  </div>
+</div>

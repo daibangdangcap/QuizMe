@@ -1,1 +1,8 @@
-<input type="text" placeholder="Nhập bí danh của bạn" class="center-placeholder" [value]="value" (input)="changeValue($event)"/>
+<input [type]="type" [placeholder]="placeholder" [ngStyle]="{
+    'text-align': textAlign,
+    'color': '#333',
+    'font-size': '16px',
+    'width': width,
+    'height': height
+  }"
+  class="center-placeholder" [value]="value" (input)="changeValue($event)"/>
