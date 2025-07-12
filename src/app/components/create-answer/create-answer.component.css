@@ -1,0 +1,13 @@
+.row-container {
+  display: inline-flex;            /* ✅ sắp hàng ngang */
+  gap: 8px;                 /* khoảng cách giữa các component */
+  flex-wrap: nowrap;        /* không cho xuống dòng */
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+}

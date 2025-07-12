@@ -1,0 +1,13 @@
+.custom-textarea {
+  width: 350px;
+  height: 80px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #2196F3;
+  border-radius: 8px;
+  padding: 8px;
+  resize: vertical; /* Cho phép kéo chiều cao */
+  background: #f9f9f9;
+  color: #333;
+  text-align: left;
+}

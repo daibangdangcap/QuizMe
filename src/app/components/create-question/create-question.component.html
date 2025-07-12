@@ -1,21 +1,22 @@
 
 <div class="center-page">
   <div class="row-container">
-  <custom-input
-    [placeholder]="'Nhập câu hỏi'"
-    [textAlign]="'left'"
-    [width]="'350px'">
-  </custom-input>
+    <custom-input
+      [placeholder]="'Nhập câu hỏi'"
+      [textAlign]="'left'"
+      [width]="'350px'">
+    </custom-input>
 
-  <custom-input
-    [placeholder]="'Điểm'"
-    [textAlign]="'left'"
-    [width]="'100px'"
-    [type]="'number'">
-  </custom-input>
+    <custom-input
+      [placeholder]="'Điểm'"
+      [textAlign]="'left'"
+      [width]="'100px'"
+      [type]="'number'">
+    </custom-input>
 
-  <more-button></more-button>
-</div>
-
-
+    <more-button [menu]="lst_Menu_Question"></more-button>
+  </div>
+  <div>
+    <create-answer></create-answer>
+  </div>
 </div>

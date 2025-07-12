@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'more-button',
@@ -9,10 +9,11 @@ import { Component } from '@angular/core';
 })
 export class MoreButtonComponent {
   isMenuOpen = false;
+  @Input() menu: any=[]
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  selectType(){
+  selectType(type: any, value: any =null){
     this.isMenuOpen = !this.isMenuOpen;
   }
 }

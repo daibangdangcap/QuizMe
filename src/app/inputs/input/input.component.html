@@ -1,8 +1,8 @@
 <input [type]="type" [placeholder]="placeholder" [ngStyle]="{
     'text-align': textAlign,
     'color': '#333',
-    'font-size': '16px',
+    'font-size': fontSize,
     'width': width,
-    'height': height
+    'height': height,
   }"
   class="center-placeholder" [value]="value" (input)="changeValue($event)"/>

@@ -16,7 +16,8 @@ export class InputComponent {
   @Input() placeholder: string = '';
   @Input() width: string ='300px';
   @Input() height: string= '50px';
-  @Input() type: string= 'text'
+  @Input() type: string= 'text';
+  @Input() fontSize: string = '16px';
   changeValue(event:Event){
     const input = event.target as HTMLInputElement;
     const value = input.value;
