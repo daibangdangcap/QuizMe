@@ -7,9 +7,14 @@ export const CUSTOM_CONST={
   },
 
   //0: tạo câu hỏi mới, 1: xóa câu hỏi, 2: thay đổi câu trả lời
-  QUESTION_TYPE:{
+  QUESTION_ACTION:{
     CREATE: 0,
     DELETE: 1,
     CHANGE_ANSWER: 2
+  },
+  ALLOW_ANSWER_NUMBER:{
+    SINGLE_NUMBER: 4,
+    MULTIPLE_NUMBER: 4,
+    TEXT_NUMBER: 1
   }
 }

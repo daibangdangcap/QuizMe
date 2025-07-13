@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'more-button',
@@ -10,10 +10,13 @@ import { Component, Input } from '@angular/core';
 export class MoreButtonComponent {
   isMenuOpen = false;
   @Input() menu: any=[]
+  @Output() onMenuSelect= new EventEmitter<any>();
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  selectType(type: any, value: any =null){
-    this.isMenuOpen = !this.isMenuOpen;
+
+  handleSelect(type: any, value: any){
+    this.onMenuSelect.emit({type, value});
+    this.toggleMenu();
   }
 }

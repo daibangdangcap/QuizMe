@@ -23,10 +23,12 @@
         <ng-container [ngSwitch]="orderStep">
           <div *ngSwitchCase="1">
             <custom-input
+              [type]="'text'"
               [value]="player.name"
               (changeEvent)="changeValue($event)"
               [placeholder]="'Nhập bí danh của bạn'"
-              [textAlign]="'center'">
+              [textAlign]="'center'"
+              [field]="'name'">
             </custom-input>
           </div>
           <div *ngSwitchCase="2">

@@ -1,8 +1,15 @@
-<input [type]="type" [placeholder]="placeholder" [ngStyle]="{
+<input
+  [type]="type"
+  [placeholder]="placeholder"
+  [ngStyle]="type !== 'checkbox' ? {
     'text-align': textAlign,
     'color': '#333',
     'font-size': fontSize,
     'width': width,
-    'height': height,
-  }"
-  class="center-placeholder" [value]="value" (input)="changeValue($event)"/>
+    'height': height
+  } : null"
+  class="center-placeholder"
+  [value]="type !== 'checkbox' ? value : null"
+  [checked]="type === 'checkbox' ? value : null"
+  (input)="changeValue($event)"
+/>

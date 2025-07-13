@@ -1,42 +1,29 @@
-:host {
-  display: block;
-  height: 100vh;
-  background: linear-gradient(to bottom,#2C3E50, #2F4F4F);
-}
 
-.container {
-  padding-top: 10vh;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.center-page {
-  justify-content: center;
-  padding-top: 10vh;
-  height: 100vh;
-}
-
-
-.animated-wrapper {
-  border: 2px dashed red;
-  padding: 1rem;
-}
-
-.ready-content{
-  font-family: 'Poppins', sans-serif;
-}
-
-.ready-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .row-container {
   display: inline-flex;            /* ✅ sắp hàng ngang */
   gap: 8px;                 /* khoảng cách giữa các component */
   flex-wrap: nowrap;        /* không cho xuống dòng */
 }
+.create-answer-btn {
+  margin-top: 16px;
+  padding: 8px 20px;
+  background: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.answer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

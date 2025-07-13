@@ -1,16 +1,16 @@
 <div class="row-container">
   <div [ngSwitch]="answerType">
     <ng-container *ngSwitchCase="0">
-      <input type="checkbox" />
-      <custom-input height="30px" width="350px" fontSize="12px"></custom-input>
-      <button class="delete-btn">
-      <i class="fa fa-trash"></i>
-    </button>
+      <custom-input [type]="'checkbox'" [field]="'isCorrect'" (changeEvent)="changeValue($event)" [value]="option.isCorrect"></custom-input>
+      <custom-input [type]="'text'" height="30px" width="350px" fontSize="12px" [field]="'text'" [value]="option.text" (changeEvent)="changeValue($event)"></custom-input>
+      <button class="delete-btn" (click)="deleteOption()">
+        <i class="fa fa-trash"></i>
+      </button>
     </ng-container>
     <ng-container *ngSwitchCase="1">
-      <input type="checkbox" />
-      <custom-input height="30px" width="350px" fontSize="12px"></custom-input>
-      <button class="delete-btn">
+      <custom-input [type]="'checkbox'" [field]="'isCorrect'" (changeEvent)="changeValue($event)" [value]="option.isCorrect"></custom-input>
+      <custom-input [type]="'text'" height="30px" width="350px" fontSize="12px" [field]="'text'" [value]="option.text" (changeEvent)="changeValue($event) "></custom-input>
+      <button class="delete-btn" (click)="deleteOption()">
         <i class="fa fa-trash"></i>
       </button>
     </ng-container>

@@ -1,22 +1,33 @@
 
-<div class="center-page">
+<div style="padding:10px">
   <div class="row-container">
     <custom-input
+      [type]="'text'"
       [placeholder]="'Nhập câu hỏi'"
       [textAlign]="'left'"
-      [width]="'350px'">
+      [width]="'350px'"
+      [value]="question.text"
+      (changeEvent)="changeValue($event)"
+      [field]="'text'">
     </custom-input>
 
     <custom-input
+      [type]="'text'"
       [placeholder]="'Điểm'"
       [textAlign]="'left'"
       [width]="'100px'"
-      [type]="'number'">
+      [type]="'number'"
+      [value]="question.score"
+      (changeEvent)="changeValue($event)"
+      [field]="'score'">
     </custom-input>
 
-    <more-button [menu]="lst_Menu_Question"></more-button>
+    <more-button [menu]="lst_Menu_Question" (onMenuSelect)="handleMenuSelect($event)"></more-button>
   </div>
   <div>
-    <create-answer></create-answer>
+    <button class="create-answer-btn" (click)="handleCreateAnswer()">Tạo câu trả lời</button>
+  </div>
+  <div class="answer-list">
+    <ng-template #answerContainer></ng-template>
   </div>
 </div>

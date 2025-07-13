@@ -7,7 +7,7 @@
   <div
     class="menu-item"
     *ngFor="let option of menu"
-    (click)="selectType(option.type, option.value)"
+    (click)="handleSelect(option.type, option.value)"
   >
     {{ option.text }}
   </div>
